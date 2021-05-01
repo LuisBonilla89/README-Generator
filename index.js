@@ -1,33 +1,20 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const util = require("util");
 const generateMd = require("./utils/generateMarkdown");
-const writeFileAsync = util.promisify(fs.writeFile);
-
 // Prompt questions array for user to input README data
 const questions = [
   {
     type: "input",
-    message: "What is the title of your project?",
+    message: "What is the project of your title?",
     name: "title",
   },
+
   {
     type: "input",
     message: "Describe what your project is about",
-    name: "about",
+    name: "description",
   },
-  {
-    type: "input",
-    message:
-      "List any references that influened the development of your project?",
-    name: "acknowledgements",
-  },
-  {
-    type: "input",
-    message:
-      "List any prerequistite software is needed to support your project?",
-    name: "prerequisite",
-  },
+
   {
     type: "input",
     message: "How can your application be installed?",
@@ -40,8 +27,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "How can updates be made to your project?",
-    name: "contribution",
+    message: "List your collaborators if any, with their Github links",
+    name: "credits",
   },
   {
     type: "input",
@@ -56,40 +43,28 @@ const questions = [
       "GNU General Public License 2.0",
       "Apache License 2.0",
       "GNU General Public License 3.0",
+      "BSD 3-Clause",
+      "Mozilla Public License 2.0",
     ],
     name: "license",
   },
 ];
 
-const promptUser = () => {
-  return inquirer.prompt(questions);
-};
+function writeToFile(fileName, data) {
+  fs.writeFile("./" + fileName, data, (err) => {
+    if (err) {
+      return console.error(err);
+    } else {
+      console.log("Successful writing to " + fileName);
+    }
+  });
+}
 
-const writeToFile = (fileName, data) => {
-  return writeFileAsync(fileName, data);
-};
-
-const init = async () => {
-  try {
-    console.log(
-      "Please answer the following questions to generate your README file:"
-    );
-
-    // prompt user questions for data entry CHANGE THIS
-    const answers = await promptUser();
-
-    // create README content using answers CHANGE THIS
-    const fileContent = generateMd(answers);
-
-    // write answers to README.md file
-    await writeToFile("./result/README.md", fileContent);
-
-    // notify user of file output generation
-    console.log("README.md successfully created in output folder.");
-  } catch (err) {
-    console.error("Errors identified. README generation failed.");
-    console.log(err);
-  }
-};
-
+// TODO: Create a function to initialize app
+function init() {
+  inquirer.prompt(questions).then(function (info) {
+    writeToFile("README.md", generateMd(info));
+  });
+}
+// Function call to initialize app
 init();
