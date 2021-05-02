@@ -66,5 +66,5 @@ function init() {
     writeToFile("README.md", generateMd(info));
   });
 }
-// Function call to initialize app
+// Function call for app initialisation
 init();

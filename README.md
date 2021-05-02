@@ -1,22 +1,37 @@
-# asd
-  ## Badge: ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
-  ## Table of Contents:
-  * [Installation](#Installation)
-  * [Tests](#Tests)
-  * [Credits](#Credits)
-  * [Deployment](#Deployment)
-  * [License](#License)
+# README Generator
+
+## Badge: ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+## Table of Contents:
+
+- [Installation](#Installation)
+- [Tests](#Tests)
+- [Credits](#Credits)
+- [Deployment](#Deployment)
+- [License](#License)
+
 ## Description:
-asd
+
+Creating profesional README files for future projects
+
 # Installation
-asd
+
+via node.js
+
 # Tests
-asd
+
+N/A
+
 # Credits
-asd
+
+https://github.com/LuisBonilla89
+
 # Deployment
-asd
+
+Node.js
+
 ## License
- A. Your Badge : ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
- B. Your Badge Link : <a href = "https://www.gnu.org/licenses/gpl-3.0">License Link</a>
- C. Your Badge Readme: <a href = "https://github.com/TheFox/GPLv3.mdl">GPLv3 Guide</a>
+
+A. Your Badge : ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+B. Your Badge Link : <a href = "https://opensource.org/licenses/MIT">License Link</a>
+C. Your Badge Readme: <a href = "https://gist.github.com/ckib16/8732561535ed766cd6b8">MIT Guide</a>
