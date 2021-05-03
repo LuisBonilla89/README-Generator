@@ -1,37 +1,23 @@
-# README Generator
+# Homework-9: README Generator
 
-## Badge: ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+## Overview:
 
-## Table of Contents:
+The purpose of this assignment was to create a README file generator for future projects.
 
-- [Installation](#Installation)
-- [Tests](#Tests)
-- [Credits](#Credits)
-- [Deployment](#Deployment)
-- [License](#License)
+## Implementation Details
 
-## Description:
+1. Incorporation of Javascript file utilising Node.js runtime environment for app deployment.
 
-Creating profesional README files for future projects
+2. Utilising inquirer package with Node modules for app functionality
 
-# Installation
+3. Synchronisation of Javascript files for population of README files via module.export
 
-via node.js
+## Deployed Application
 
-# Tests
+Please click on the following link for application:
 
-N/A
+https://luisbonilla89.github.io/README-Generator/
 
-# Credits
+# Licence
 
-https://github.com/LuisBonilla89
-
-# Deployment
-
-Node.js
-
-## License
-
-A. Your Badge : ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-B. Your Badge Link : <a href = "https://opensource.org/licenses/MIT">License Link</a>
-C. Your Badge Readme: <a href = "https://gist.github.com/ckib16/8732561535ed766cd6b8">MIT Guide</a>
+MIT
